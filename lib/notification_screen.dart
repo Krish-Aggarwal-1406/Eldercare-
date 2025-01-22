@@ -5,71 +5,71 @@ class NotificationScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // List of notifications with details such as title, message, timestamp, and category
+    // List of notifications for the caregiver, such as health updates, emergency alerts, and reminders for the care seeker
     final List<Map<String, String>> notifications = [
       {
         'title': 'Medication Reminder',
-        'message': 'It\'s time for your morning medication: 5mg of Paracetamol.',
+        'message': 'Your care recipient is due for their morning medication: 5mg of Paracetamol.',
         'timestamp': '2025-01-22 08:00 AM',
         'category': 'Medication',
       },
       {
         'title': 'Health Alert',
-        'message': 'Your heart rate is too high. Please check your vitals.',
+        'message': 'The heart rate of your care recipient is too high. Please check their vitals.',
         'timestamp': '2025-01-22 07:45 AM',
         'category': 'Health Monitoring',
       },
       {
         'title': 'Doctor Appointment Reminder',
-        'message': 'Your doctor visit is scheduled for 3 PM today.',
+        'message': 'The care recipient has a doctor appointment scheduled for 3 PM today.',
         'timestamp': '2025-01-21 09:00 AM',
         'category': 'Appointment',
       },
       {
         'title': 'Emergency SOS Alert',
-        'message': 'SOS triggered! Volunteers are on their way.',
+        'message': 'SOS triggered! Volunteers are on their way to assist your care recipient.',
         'timestamp': '2025-01-22 06:30 PM',
         'category': 'Emergency',
       },
       {
         'title': 'Activity Alert',
-        'message': 'You have not moved for the past 2 hours. Please take a walk.',
+        'message': 'Your care recipient has not moved for the past 2 hours. Please encourage them to take a walk.',
         'timestamp': '2025-01-22 10:00 AM',
         'category': 'Activity Monitoring',
       },
       {
         'title': 'Medication Reminder',
-        'message': 'It\'s time for your evening medication: 10mg of Ibuprofen.',
+        'message': 'It\'s time for your care recipient\'s evening medication: 10mg of Ibuprofen.',
         'timestamp': '2025-01-22 07:00 PM',
         'category': 'Medication',
       },
       {
         'title': 'Health Alert',
-        'message': 'Blood pressure is too high. Please consult your doctor.',
+        'message': 'Blood pressure of your care recipient is too high. Please consult their doctor immediately.',
         'timestamp': '2025-01-21 05:30 PM',
         'category': 'Health Monitoring',
       },
       {
         'title': 'Activity Alert',
-        'message': 'Goal achieved! You walked 10,000 steps today.',
+        'message': 'Great news! Your care recipient has achieved their daily step goal of 10,000 steps.',
         'timestamp': '2025-01-21 08:00 PM',
         'category': 'Activity Monitoring',
       },
       {
         'title': 'Emergency SOS Alert',
-        'message': 'SOS triggered! Assistance is on the way.',
+        'message': 'SOS triggered! Assistance is on the way for your care recipient.',
         'timestamp': '2025-01-22 12:15 PM',
         'category': 'Emergency',
       },
       {
         'title': 'Appointment Reminder',
-        'message': 'Your dental check-up appointment is tomorrow at 2 PM.',
+        'message': 'Your care recipient has a dental check-up appointment tomorrow at 2 PM.',
         'timestamp': '2025-01-22 09:00 AM',
         'category': 'Appointment',
       },
       {
         'title': 'Medication Reminder',
-        'message': 'Don\'t forget your 2pm medication: 20mg of Amoxicillin.',
+        'message': 'Reminder: Your care recipient has their 2 PM medication: 20mg of Amoxicillin.',
         'timestamp': '2025-01-22 02:00 PM',
         'category': 'Medication',
       },
@@ -95,7 +95,7 @@ class NotificationScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Notifications'),
+        title: Text('Caregiver Notifications'),
         backgroundColor: Colors.blueAccent,
       ),
       body: ListView.builder(
