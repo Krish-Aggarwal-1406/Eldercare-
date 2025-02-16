@@ -1,5 +1,8 @@
+
 import 'package:flutter/material.dart';
-import 'login_screen.dart';
+
+import 'LoginScreen.dart';
+
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({super.key});
@@ -85,7 +88,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                             style: TextStyle(
                               fontSize: textScaleFactor * 28,
                               fontWeight: FontWeight.bold,
-                              color: Colors.blueAccent, // Updated text color for better contrast
+                              color: Colors.black, // Updated text color for better contrast
                             ),
                           ),
                           SizedBox(height: srcheight * 0.02),
@@ -112,7 +115,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                         borderRadius: BorderRadius.circular(25),
                                       ),
                                       child: Image.asset(
-                                        "assets/caregiver_new-removebg-preview.png",
+                                        "assets/images/caregiver.png",
                                         fit: BoxFit.cover,
                                       ),
                                     ),
@@ -139,7 +142,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                         borderRadius: BorderRadius.circular(25),
                                       ),
                                       child: Image.asset(
-                                        "assets/careseeker-removebg-preview.png",
+                                        "assets/images/careseeker.png",
                                         fit: BoxFit.cover,
                                       ),
                                     ),

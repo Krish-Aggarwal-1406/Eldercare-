@@ -1,8 +1,8 @@
-import 'package:alphaintern_hackathon/notification_screen.dart';
-import 'package:alphaintern_hackathon/signup_page.dart';
+
 import 'package:flutter/material.dart';
 
-import 'homescreen.dart';
+import '../widgets/BottomNavBar.dart';
+import 'SignUpScreen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -34,7 +34,7 @@ class _LoginScreenState extends State<LoginScreen> {
         loading = false;
       });
       Navigator.push(
-          context, MaterialPageRoute(builder: (context) => NotificationScreen()));
+          context, MaterialPageRoute(builder: (context) => BottomNavBar()));
     });
   }
 
@@ -46,10 +46,10 @@ class _LoginScreenState extends State<LoginScreen> {
 
     return Scaffold(
       backgroundColor: Colors.white,
-      body: SingleChildScrollView(
-        child: Container(
-          width: srcwidth,
-          height: srcheight,
+      body: Container(
+        width: srcwidth,
+        height: srcheight,
+        child: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -58,6 +58,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 padding: EdgeInsets.symmetric(horizontal: srcwidth * 0.08),
                 child: Column(
                   children: [
+                    SizedBox(height: srcwidth*0.1,),
                     Text(
                       'Welcome to ElderCare+',
                       style: TextStyle(
@@ -71,7 +72,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     ClipRRect(
                       borderRadius: BorderRadius.all(Radius.circular(20)),
                       child: Image.asset(
-                        "assets/Screenshot 2025-01-22 211923.png",
+                        "assets/images/doc_aunt.png",
                         fit: BoxFit.fill,
                         width: srcwidth * 0.8,
                         height: srcheight * 0.2,
@@ -165,11 +166,11 @@ class _LoginScreenState extends State<LoginScreen> {
                         borderRadius: BorderRadius.circular(srcwidth * 0.05),
                       ),
                       child: Padding(
-                        padding: EdgeInsets.all(srcwidth * 0.05),
+                        padding: EdgeInsets.only(left:srcwidth * 0.05,right: srcwidth * 0.05,top: srcwidth * 0.05),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            SizedBox(height: srcheight * 0.02),
+                            // SizedBox(height: srcheight * 0.02),
                             Text(
                               'Login',
                               style: TextStyle(
@@ -258,6 +259,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 }
                               },
                               style: ElevatedButton.styleFrom(
+
                                 backgroundColor: Colors.blueAccent,
                                 foregroundColor: Colors.white,
                                 padding: EdgeInsets.symmetric(
@@ -281,34 +283,37 @@ class _LoginScreenState extends State<LoginScreen> {
                                   : Text('Login'),
                             ),
                             SizedBox(height: srcheight * 0.03),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Text(
-                                  "Don't have an account? ",
-                                  style: TextStyle(
-                                    color: Colors.black54,
-                                    fontSize: textScaleFactor * 14,
-                                  ),
-                                ),
-                                GestureDetector(
-                                  onTap: () {
-                                    Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (context) =>
-                                                SignUpScreen()));
-                                  },
-                                  child: Text(
-                                    'Sign Up',
+                            Padding(
+                              padding: const EdgeInsets.only(bottom: 5.0),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    "Don't have an account? ",
                                     style: TextStyle(
-                                      color: Colors.blueAccent,
-                                      fontWeight: FontWeight.bold,
+                                      color: Colors.black54,
                                       fontSize: textScaleFactor * 14,
                                     ),
                                   ),
-                                ),
-                              ],
+                                  GestureDetector(
+                                    onTap: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  SignUpScreen()));
+                                    },
+                                    child: Text(
+                                      'Sign Up',
+                                      style: TextStyle(
+                                        color: Colors.blueAccent,
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: textScaleFactor * 14,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ),
                             SizedBox(height: srcheight * 0.01),
                           ],

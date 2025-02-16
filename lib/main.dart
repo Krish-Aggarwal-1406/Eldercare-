@@ -1,5 +1,5 @@
+import 'package:alphaintern_hackathon/screens/SignUpScreen.dart';
 import 'package:flutter/material.dart';
-import 'login_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Color(0xA40EA4FF)),
         useMaterial3: true,
       ),
-      home: LoginScreen(),
+      home: SignUpScreen(),
     );
   }
 }
